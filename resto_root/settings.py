@@ -30,7 +30,7 @@ INSTALLED_APPS = [
 
 
     'app.account',
-
+    'app.resto',
 ]
 
 MIDDLEWARE = [

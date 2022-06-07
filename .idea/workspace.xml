@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="efe0d0fe-1287-4d95-a17f-3e301f007509" name="Changes" comment="" />
+    <list default="true" id="efe0d0fe-1287-4d95-a17f-3e301f007509" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/account/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/account/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/account/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/account/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/account/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/account/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/account/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/account/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/account/tasks.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/account/tasks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/account/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/account/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/account/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resto_root/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/resto_root/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resto_root/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/resto_root/urls.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,7 +45,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/ananas/Desktop/Restoran"
+    "last_opened_file_path": "/home/ananas/Desktop/BigProject"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -46,5 +58,16 @@
       <updated>1651164336763</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
