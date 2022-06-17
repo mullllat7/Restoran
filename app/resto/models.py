@@ -7,7 +7,10 @@ User = get_user_model()
 class Resto(models.Model):
 
     resto_name = models.CharField(max_length=255, unique=True,  primary_key=True)
+    opening_time = models.TimeField(default='06:00')
+    closing_time = models.TimeField(default='00:00')
     adress = models.CharField(max_length=255)
+    num_of_tables = models.PositiveIntegerField(null=True)
 
     def __str__(self):
         return self.resto_name
@@ -69,9 +72,3 @@ class Saved(models.Model):
 
     def __str__(self):
         return f'{self.saved}'
-
-
-# class RestoNames:
-#
-#     def get_names(self):
-#         return Resto.objects.all()

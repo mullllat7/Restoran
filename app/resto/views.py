@@ -1,6 +1,7 @@
 import django_filters
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import generics, viewsets
+from rest_framework.decorators import action
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import IsAuthenticated
 
@@ -42,10 +43,15 @@ class RestoViewSet(viewsets.ModelViewSet):
     serializer_class = RestoSerializer
     permission_classes = [IsAuthenticated, ]
 
+    @action(detail=False, methods=['get'])
+    def ordered(self, request, pk=None):
+        orders = Order.objects.filter(user=request.user)
+
 
 # --------------------------------Menu------------------------------------
-# --------------------------------Menu------------------------------------
 
+
+# --------------------------------Menu------------------------------------
 
 class MenuListView(generics.ListAPIView, RestoNames):
     queryset = Menu.objects.all()

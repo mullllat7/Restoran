@@ -11,7 +11,6 @@ from .serializers import (RegisterSerializer, ActivationSerializer, LoginSeriali
                           ForgetPasswordCompleteSerializer, ForgotPasswordSerializer, InfoUserSerializer)
 
 
-
 class RegisterView(APIView):
     def post(self, request):
         data = request.data
@@ -22,6 +21,7 @@ class RegisterView(APIView):
                       f'Вам отправлено письмо с активацией'
             return Response(message, status=201)
 
+
 class ActivationView(APIView):
     def post(self, request):
         data = request.data
@@ -31,9 +31,9 @@ class ActivationView(APIView):
             return Response('Ваш аккаунт успешно активирован')
 
 
-
 class LoginView(ObtainAuthToken):
     serializer_class = LoginSerializer
+
 
 class LogoutView(APIView):
     permission_classes = [IsAuthenticated]
@@ -63,6 +63,7 @@ class ForgotPasswordView(APIView):
         serializer.send_code()
         return Response('Вам отправлено письмо для восстовления пароля')
 
+
 class ForgotPasswordCompleteView(APIView):
     def post(self, request):
         data = request.data
@@ -70,6 +71,8 @@ class ForgotPasswordCompleteView(APIView):
         serializer.is_valid(raise_exception=True)
         serializer.set_new_pass()
         return Response('Пароль успешно обновлён')
+
+
 class PermissionMixin:
     def get_permissions(self):
         if self.action == "create":
@@ -79,8 +82,6 @@ class PermissionMixin:
         else:
             permissions = [AllowAny]
         return [permission() for permission in permissions]
-
-
 
 
 class InfoUserViewSet(PermissionMixin, viewsets.ModelViewSet):

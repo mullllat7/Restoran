@@ -2,6 +2,7 @@ from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
 from django.core.mail import send_mail
 from django.db import models
 
+
 class UserManager(BaseUserManager):
     def _create(self, email, password, **extra_fields):
         if not email:
@@ -63,6 +64,7 @@ class InfoUser(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='info_user')
     name = models.CharField(max_length=50)
     surname = models.CharField(max_length=50)
+    phone_number = models.CharField(max_length=20, unique=True, null=True)
     image = models.ImageField(upload_to='media/user_image', blank=True, null=True)
 
     def __str__(self):

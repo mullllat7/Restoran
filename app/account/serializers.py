@@ -162,13 +162,12 @@ class ForgetPasswordCompleteSerializer(serializers.Serializer):
         user.save()
 
 
-
 class InfoUserSerializer(serializers.ModelSerializer):
     author = ReadOnlyField(source='author.email')
 
     class Meta:
         model = InfoUser
-        fields = ['id', 'author', 'name', 'surname', 'image']
+        fields = '__all__'
 
     def create(self, validated_data):
         request = self.context.get('request')
@@ -176,6 +175,7 @@ class InfoUserSerializer(serializers.ModelSerializer):
             author=request.user,
             defaults={'name': validated_data.get('name'),
                       'surname': validated_data.get('surname'),
+                      'phone_number': validated_data('phone_number'),
                       'image': validated_data.get('image')}
         )
         return info
